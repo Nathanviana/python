@@ -4,7 +4,7 @@
 # • o novo valor à ser pago por essa residência, se for dado um desconto de 15%. 
 
 salarioMinimo = float(input("Digite o valor do salário mínimo: R$ "))
-quilowattsConsumidos = float(input("Digite a quantidade de quilowatts    consumidos: "))
+quilowattsConsumidos = float(input("Digite a quantidade de quilowatts consumidos: "))
 
 valorPorQuilowatt = salarioMinimo * 0.02
 
