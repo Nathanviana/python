@@ -7,23 +7,28 @@ tempoManutencao = 6
 custoManutencao = 2000
 txUsoFerroviaria = 5000
 
-dias = int(input('Digite um número de dias:'))
+try:
+    dias = int(input('Digite um número de dias:'))
+        
+    horaTotal = dias * funcionaPorDia
+
+    kmPecorridos = horaTotal * vDoTrem
+
+    numManutencao = kmPecorridos / distanciaManutencao
+
+    custoTotalManutencao = numManutencao * custoManutencao
+
+    numTaxaFerrovia = dias // 3
+
+    custoTotalTaxaFerrovia = numTaxaFerrovia * txUsoFerroviaria
+
+    custoTotal = custoTotalManutencao + custoTotalTaxaFerrovia
+
+    print("Relatório:")
+    print(f"km pecorridos: {kmPecorridos} km" )
+    print(f"Manutenções realizadas: {numManutencao}")
+    print(f"Custo total: R$ {custoTotal}")
+
+except:
     
-horaTotal = dias * funcionaPorDia
-
-kmPecorridos = horaTotal * vDoTrem
-
-numManutencao = kmPecorridos / distanciaManutencao
-
-custoTotalManutencao = numManutencao * custoManutencao
-
-numTaxaFerrovia = dias // 3
-
-custoTotalTaxaFerrovia = numTaxaFerrovia * txUsoFerroviaria
-
-custoTotal = custoTotalManutencao + custoTotalTaxaFerrovia
-
-print("Relatório:")
-print(f"km pecorridos: {kmPecorridos} km" )
-print(f"Manutenções realizadas: {numManutencao}")
-print(f"Custo total: R$ {custoTotal}")
+    print('Você não inseriu um número inteiro')
